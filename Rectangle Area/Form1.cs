@@ -16,5 +16,21 @@ namespace Rectangle_Area
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double w = double.Parse(textBox1.Text);
+                double h = double.Parse(textBox2.Text);
+                double a = w * h;
+                textBox3.Text = a.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Error: Please enter two numbers.");
+                textBox3.Text = "";
+            }
+        }
     }
 }
